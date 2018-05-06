@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+nav {
+  height: 3em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%;
+  position: absolute;
+}
+
+
+.tippers {
+  position: relative;
+  top: 3em;
+  border: 1px black solid;
+  border-collapse: collapse;
+}
