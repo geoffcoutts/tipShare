@@ -25,11 +25,17 @@ class App extends Component {
       ],
       support: {}
     };
-    this.addTipper = this.addTipper.bind(this);
+    this.addServer = this.addServer.bind(this);
   }
 
-  addTipper() {
-
+  addServer(newServer, type) {
+    let serverList = this.state.servers
+    let serverType = serverList.find(group => group.type === type)
+    serverType.rows.push(newServer)
+    console.log(serverType)
+    // this.setState({
+    //   servers:
+    // })
   }
 
   render() {
@@ -39,6 +45,7 @@ class App extends Component {
         serverType= { serverGroup.type }
         tipPercentage={ serverGroup.tipPercentage }
         data={ serverGroup.rows }
+        addServer={ this.addServer }
       />
     ));
 
